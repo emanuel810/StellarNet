@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import { BarraNavegacion } from './componentes/BarraNavegacion.jsX';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Banner } from './componentes/Banner';
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <>
       <div>  
       <BarraNavegacion/>
+      <Banner/>
       </div>
     </>
   )
