@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import {Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+
 import React from 'react'
-import logo from '../assets/img/LogoLado.png';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import logo from '../../assets/img/ImagenRectangularSinFondo.png';
+import navIcon1 from '../../assets/img/nav-icon1.svg';
+import navIcon2 from '../../assets/img/nav-icon2.svg';
+import navIcon3 from '../../assets/img/nav-icon3.svg';
 
 export const BarraNavegacion = () => {
   const [activarLink, setActivarLink]= useState('home');
@@ -39,8 +41,9 @@ export const BarraNavegacion = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activarLink == 'Inicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('Inicio')} >Inicio</Nav.Link>
-            <Nav.Link href="#skills" className={activarLink == 'Soporte'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('Soporte')} >Soporte</Nav.Link>
+            <Nav.Link href="#inicio" className={activarLink == 'inicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('inicio')} >Inicio</Nav.Link>
+            <Nav.Link href="#servicio" className={activarLink == 'servicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('servicio')} >Servicio</Nav.Link>
+            <Nav.Link href="#contactos" className={activarLink == 'contactos'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('contactos')} >Contactanos</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -48,7 +51,7 @@ export const BarraNavegacion = () => {
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-            <button className="vvd" onClick={()=> console.log('connect')}><span>Iniciar Sesion</span></button>
+            <Link to="/"><button className="vvd" onClick={()=> console.log('connect')}><span>Iniciar Sesion</span></button></Link>
           </span>
         </Navbar.Collapse>
       </Container>

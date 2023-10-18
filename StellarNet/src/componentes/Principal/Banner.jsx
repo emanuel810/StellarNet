@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 
 export const Banner = () => {
@@ -50,9 +50,9 @@ export const Banner = () => {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            <h1>{`¡El mejor internet de todo el`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "planeta!", "sistema sola!", "Universo!" ]'><span className="wrap">{text}</span></span></h1>
+            <h1>{`¡La mejor señal de todo el`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "planeta!", "sistema sola!", "Universo!" ]'><span className="wrap">{text}</span></span></h1>
             <p>StellarNet se especializa en brindar conexiones de internet rápidas y confiables para hogares y empresas. Nuestros servicios incluyen acceso a banda ancha de alta velocidad, conexiones seguras y un servicio al cliente excepcional para garantizar una experiencia de navegación sin interrupciones.</p>
-            <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+            <button onClick={() => console.log('connect')}>Iniciar Sesion <ArrowRightCircle size={25} /></button>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <img src={headerImg} alt="Header Img"/>

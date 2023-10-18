@@ -1,22 +1,27 @@
 import React from 'react';
-import './App.css'
-import { BarraNavegacion } from './componentes/BarraNavegacion.jsX';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Banner } from './componentes/Banner';
-import { Projects } from './componentes/Projects';
-import { Footer } from './componentes/Footer';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import { PaginaPrincipal } from './paginas/PaginaPrincipal';
+import {IniciarSesion} from './paginas/IniciarSesion'
+import {Registrar} from './paginas/Registrar'
 
 function App() {
   
   return (
-    <>
-      <div>  
-      <BarraNavegacion/>
-      <Banner/>
-      <Projects/>
-      <Footer/>
-      </div>
-    </>
+   <>
+   <div>
+   <Router>
+      <Routes>
+        <Route path="/" element={<IniciarSesion />} />
+        <Route path="/home" element={<PaginaPrincipal />} />
+        <Route path="/registro" element={<Registrar />} />
+        <Route path="*" element={<div>
+          <h1>no funciona</h1>
+        </div>} />
+      </Routes>
+    </Router>
+   </div>
+   </>
   )
 }
 
