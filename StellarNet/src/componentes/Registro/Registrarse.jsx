@@ -36,7 +36,7 @@ export const Registrarse = () => {
           <input type="password" placeholder="Confirmacion de contraseña" required />
           <i className='bx bxs-user'></i>
         </div>
-        <Link to="/home"><button type="submit" className="btn">Registrarse</button></Link>
+        <Link to="/inicio"><button type="submit" className="btn">Registrarse</button></Link>
 
         <div className="registrer-link">
         <Link to="/"><a className="link" >Regresar</a></Link>

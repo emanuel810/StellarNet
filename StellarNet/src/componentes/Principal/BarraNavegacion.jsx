@@ -41,9 +41,9 @@ export const BarraNavegacion = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#inicio" className={activarLink == 'inicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('inicio')} >Inicio</Nav.Link>
-            <Nav.Link href="#servicio" className={activarLink == 'servicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('servicio')} >Servicio</Nav.Link>
-            <Nav.Link href="#contactos" className={activarLink == 'contactos'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('contactos')} >Contactanos</Nav.Link>
+            <Nav.Link href="/inicio" className={activarLink == 'inicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('inicio')} >Inicio</Nav.Link>
+            <Nav.Link href="/inicio" className={activarLink == 'servicio'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('servicio')} >Servicio</Nav.Link>
+            <Nav.Link href="/soporte" className={activarLink == 'soporte'? 'active-navbar-link':'navbar-link'}  onClick={()=> actualizarEstadoLink('soporte')} >Soporte</Nav.Link>
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
@@ -51,7 +51,7 @@ export const BarraNavegacion = () => {
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-            <Link to="/"><button className="vvd" onClick={()=> console.log('connect')}><span>Iniciar Sesion</span></button></Link>
+            <p className="usuario">Emanuel</p>
           </span>
         </Navbar.Collapse>
       </Container>

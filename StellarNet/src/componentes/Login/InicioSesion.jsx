@@ -26,7 +26,7 @@ export const InicioSesion = () => {
             </label>
             <a href="#">Se te olvidó la contraseña</a>
           </div>
-          <Link to="/home"><button type="submit" className="btn">Iniciar Sesion</button></Link>
+          <Link to="/inicio"><button type="submit" className="btn">Iniciar Sesion</button></Link>
 
           <div className="registrer-link">
             <p>No tienes cuenta?</p>
