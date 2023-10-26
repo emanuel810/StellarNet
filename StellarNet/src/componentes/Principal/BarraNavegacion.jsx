@@ -33,7 +33,7 @@ export const BarraNavegacion = () => {
   return (
     <Navbar expand="lg" className={scrolear ? "scrolear":""}>
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/inicio">
           <img src={logo} alt="Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -51,7 +51,7 @@ export const BarraNavegacion = () => {
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-            <p className="usuario">Emanuel</p>
+            <Link to={"/"}><button className="usuario">Cerrar Sesion</button></Link>
           </span>
         </Navbar.Collapse>
       </Container>
