@@ -1,0 +1,59 @@
+.tabla {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.tabla th, td {
+    
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center; /* Centro el texto horizontalmente */
+}
+.tabla a{
+    color: black;
+}
+
+.tabla th {
+    background-color: #333;
+    color: #fff;
+}
+
+.tabla tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla tr:hover {
+    background-color: #ddd;
+}
+
+/* Establecer colores basados en el estado */
+.tabla tr[data-estado="Pendiente"] {
+    background-color: rgb(164, 62, 62);
+    color: white;
+}
+
+.tabla tr[data-estado="En proceso"] {
+    background-color: rgb(195, 195, 68);
+}
+
+.tabla tr[data-estado="Resuelto"] {
+    background-color: rgb(53, 157, 53);
+    color: white;
+}
+
+.tabla select {
+    width: 200px; /* Ancho del campo de entrada desplegable */
+    padding: 10px; /* Relleno interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Color de fondo */
+  }
+
+  /* Estilos para las opciones */
+.tabla  option {
+    font-size: 14px; /* Tamaño de fuente de las opciones */
+  }

@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: my-sqlserver-container
+    restart: unless-stopped
+    environment:
+      SA_PASSWORD: 1234
+      ACCEPT_EULA: Y
+    ports:
+      - 1433:1433
+    networks:
+      - backend
+
+  stellarnetapi:
+    depends_on:
+      - sqlserver  # Cambié "mysqldb" a "sqlserver"
+    build: ./stellarnetapi
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    environment:
+      - DB_HOST=sqlserver  # Cambié "mysqldb" a "sqlserver"
+      - DB_USER=$MYSQLDB_USER
+      - DB_PASSWORD=$MYSQLDB_ROOT_PASSWORD
+      - DB_NAME=$MYSQLDB_DATABASE
+      - DB_PORT=$MYSQLDB_DOCKER_PORT
+      - CLIENT_ORIGIN=$CLIENT_ORIGIN
+    networks:
+      - backend
+      - frontend
+
+  stellarnet:
+    depends_on:
+      - stellarnetapi
+    build:
+      context: ./stellarnet
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL
+    ports:
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    networks:
+      - frontend  
+
+  stellarnetadm:
+    depends_on:
+      - stellarnetapi
+    build:
+      context: ./stellarnetadm
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL
+    ports:
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    networks:
+      - frontend  
+
+  stellarnetrastreo:
+    depends_on:
+      - stellarnetapi
+    build:
+      context: ./stellarnetrastreo
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL
+    ports:
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    networks:
+      - frontend  
+
+volumes: 
+  db:
+
+networks:
+  backend:
+  frontend:

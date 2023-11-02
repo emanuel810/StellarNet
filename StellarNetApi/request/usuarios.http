@@ -1,0 +1,28 @@
+@url =http://localhost:5000/usuario
+
+GET {{url}}
+###
+
+GET {{url}}/3/"Juan"
+
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+    "UsuarioNumero": "6",
+    "Nombre": "Emanuel",
+    "Apellido": "Dionicio",
+    "Correo": "emanueldionicio809@gmail.com", 
+    "Usuario" :"emanuel", 
+    "Contrasena" : "1234", 
+    "Habilitado" :"0"
+}
+
+###
+PUT {{url}}/3
+Content-Type: application/json
+
+{
+    "Habilitado": "0"
+}

@@ -1,0 +1,53 @@
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/img/imgFondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-height: 100%;
+    margin: 0;
+    height: 100%; 
+}
+
+.error .container {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 100px auto;
+    max-width: 400px;
+}
+
+.error h1 {
+    color: white;
+}
+
+.error p {
+    color: white;
+}
+
+.error .btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error.btn:hover {
+    background-color: #2980b9;
+}
+.error .image {
+    max-width: 100%;
+}
