@@ -1,0 +1,48 @@
+.error {
+    background-color: #f2f2f2; /* Establece el fondo gris */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.error .container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+.error .image {
+    width: 100px; /* Ancho de la imagen */
+    height: auto;
+}
+
+.error h1 {
+    font-size: 36px; /* Tamaño del encabezado */
+    margin-top: 10px; /* Margen superior */
+}
+
+.error p {
+    font-size: 16px; /* Tamaño del párrafo */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.error .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Margen superior del botón */
+}
+
+.error .btn:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+}

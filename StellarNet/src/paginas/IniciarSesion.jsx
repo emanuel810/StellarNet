@@ -1,12 +1,24 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../css/InicioSesion.css'
-import { InicioSesion } from '../componentes/Login/InicioSesion.jsX';
+import { InicioSesion } from '../componentes/Login/InicioSesion.jsx';
 
-export const IniciarSesion = () => {
+export const IniciarSesion = (props) => {
+
+  const [usuario, setUsuario] = useState(''); 
+
+  const handleDataChange = (newData) => {
+    setUsuario(newData);
+  }
+
+  const dataToSend = usuario;
+  if (dataToSend) {
+    props.onDataChange(dataToSend); 
+  }
+
   return (
     <>
     <div>
-        <InicioSesion/>
+        <InicioSesion onDataChange={handleDataChange}/>
     </div>
     </>
   )

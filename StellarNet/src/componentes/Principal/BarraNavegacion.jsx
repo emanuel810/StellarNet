@@ -29,7 +29,17 @@ export const BarraNavegacion = () => {
   const actualizarEstadoLink = (value) => {
     setActivarLink(value);
   }
+  const deleteCookie = (name) => {
+    const expirationDate = new Date(0).toUTCString();
+    const cookieValue = `${name}=; expires=${expirationDate}; path=/`;
+    document.cookie = cookieValue;
+  };
+  const cerrarCookie =()=>{
+    deleteCookie("usuario")
+    deleteCookie("usuarioNumero")
+  }
 
+  
   return (
     <Navbar expand="lg" className={scrolear ? "scrolear":""}>
       <Container>
@@ -51,7 +61,7 @@ export const BarraNavegacion = () => {
               <a href="#"><img src={navIcon2} alt="" /></a>
               <a href="#"><img src={navIcon3} alt="" /></a>
             </div>
-            <Link to={"/"}><button className="usuario">Cerrar Sesion</button></Link>
+            <Link to={"/"}><button onClick={cerrarCookie} className="usuario">Cerrar Sesion</button></Link>
           </span>
         </Navbar.Collapse>
       </Container>

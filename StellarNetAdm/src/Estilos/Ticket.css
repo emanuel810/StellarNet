@@ -1,0 +1,92 @@
+.informacion {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.informacion .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-top: 1%;
+}
+
+.informacion h1 {
+    text-align: center;
+}
+
+.informacion .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.informacion .col {
+    flex: 0 0 48%;
+    margin-bottom: 10px;
+}
+
+.informacion .form-group {
+    margin-bottom: 10px;
+}
+
+.informacion .comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.informacion .comment-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.informacion .comment-form {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.informacion .comment-form input[type="text"],
+.informacion .comment-form textarea {
+    width: 98%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.informacion .comment-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+.informacion .btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.informacion .btn:hover {
+    background-color: #0056b3;
+}
+
+.informacion .center-button {
+    margin-top: 20px;
+    text-align: center;
+}

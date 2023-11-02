@@ -12,7 +12,8 @@ import { Banner } from '../componentes/Principal/Banner';
 import { Projects } from '../componentes/Principal/Servicios.jsx';
 import { Footer } from '../componentes/Principal/Footer.jsx';
 
-export const PaginaPrincipal = () => {
+export const PaginaPrincipal = (props) => {
+
   return (
     <>
     <div>  

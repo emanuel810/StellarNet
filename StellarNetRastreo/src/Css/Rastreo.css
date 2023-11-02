@@ -1,0 +1,137 @@
+
+.rastreoTitulo {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+.rastreoTitulo img{
+    top: 6px;
+    position: absolute;
+    height: 91px;
+    left: 10%;
+}
+.rastreoMain {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.rastreoinput[type="text"] {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.rastreoBoton {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rastreoBoton:hover {
+    background-color: #555;
+}
+.tracking-block {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap:wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+.rastreoLista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+li {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.checkmark {
+    display: flex;
+    flex-wrap:wrap;
+    position: absolute;
+    color: green;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.crossmark {
+    
+    position: absolute;
+    color: red;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.phase-text {
+    margin-top: 2px;
+}
+hr {
+    border: none;
+    border-top: 1px solid #000;
+    width: 100%;
+    margin: 20px 0;
+}
+.additional-info {
+    margin-left: 8.5%;
+    display: flex;
+    max-width: 80%;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+.additional-info-left {
+    flex: 0.4;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+}
+.additional-info-right {
+    flex: 0.6;
+    padding-left: 20px;
+}
+.info-section {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.info-title {
+    font-weight: bold;
+}
+
+/* Media queries para adaptar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .tracking-block {
+        flex-direction: column; /* Apila elementos en pantallas pequeñas */
+    }
+    .additional-info {
+        flex-direction: column; /* Apila elementos en pantallas pequeñas */
+    }
+    .additional-info-left,
+    .additional-info-right {
+        flex: 1;
+        padding: 0; /* Elimina el relleno en pantallas pequeñas */
+        border: none; /* Elimina el borde en pantallas pequeñas */
+        text-align: center; /* Centra el contenido en pantallas pequeñas */
+    }
+    .info-section {
+        border-bottom: none; /* Elimina el borde inferior en pantallas pequeñas */
+    }
+}
+
+.bloque{
+    display: none;
+    margin-bottom: 20px;
+}

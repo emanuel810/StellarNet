@@ -1,0 +1,19 @@
+@url =http://localhost:5000/ticket
+
+
+GET {{url}}
+###
+POST {{url}}
+Content-Type: application/json
+
+{
+    "TicketNumero":1,
+    "Direccion":"Calle 123",
+    "Telefono":"555-1234",
+    "Problema":"Problema 1",
+    "Detalles":"Detalles del problema 1",
+    "Estado":"Abierto",
+    "UsuarioNumero":1,
+    "UsuarioSoporteNumero":1
+}
+    
