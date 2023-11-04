@@ -34,7 +34,7 @@ services:
 
   stellarnet:
     depends_on:
-      - stellarnetapi
+      - stellarnet
     build:
       context: ./stellarnet
       args:
@@ -46,7 +46,7 @@ services:
 
   stellarnetadm:
     depends_on:
-      - stellarnetapi
+      - stellarnetadm
     build:
       context: ./stellarnetadm
       args:
@@ -58,7 +58,7 @@ services:
 
   stellarnetrastreo:
     depends_on:
-      - stellarnetapi
+      - stellarnetrastreo
     build:
       context: ./stellarnetrastreo
       args:
