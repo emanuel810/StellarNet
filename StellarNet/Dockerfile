@@ -15,6 +15,10 @@ RUN npm run build
 FROM nginx:1.17.0-alpine
 
 COPY --from=build-stage /stellarnet/build /usr/share/nginx/html
+
+# Define the port to expose
+ARG REACT_DOCKER_PORT
+ENV REACT_DOCKER_PORT=$REACT_DOCKER_PORT
 EXPOSE $REACT_DOCKER_PORT
 
 CMD nginx -g 'daemon off;'
